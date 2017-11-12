@@ -1,0 +1,8 @@
+
+passwords\.lst
+
+*.pyc
+
+\.vscode/
+
+\.idea/
