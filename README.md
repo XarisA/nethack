@@ -27,3 +27,7 @@ python BruteForceFTP.py -a 192.168.3.84 -d data/passwords.lst -s ftpuser
 
 *I used python 2.7 for this project nevertheless most of the tools can probably be used with python 3.*
 
+---
+### This project moved to GitLab
+
+https://gitlab.com/xaris/nethack
