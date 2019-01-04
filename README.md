@@ -1,5 +1,5 @@
 # nethack
----
+
 
 A suite for testing various networking tools build in python.
 
@@ -24,7 +24,7 @@ $ ./toolsname.py
 ```
 
 ## BruteForceFTP
----
+
 
 Dictionary Attack on FTP server
 
@@ -72,8 +72,8 @@ $ python BruteForceFTP.py -a 192.168.2.65 -d data/passwords.lst -s ftpuser
 ```
 
 
-### TODO
----
+## TODO
+
 
 - Clear CR characters
 - Add support for python > 3
