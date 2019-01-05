@@ -74,10 +74,13 @@ $ python BruteForceFTP.py -a 192.168.2.65 -d data/passwords.lst -s ftpuser
 
 ## TODO
 
-
-- Clear CR characters
+- Add howto and examples in README for Getinfo.py
+- Add howto and examples in README for PortScanner.py
 - Add support for python > 3
 
+## GetInfo
+
+`# TODO`
 
 ## PortScanner
 
