@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 from socket import *
 
@@ -7,6 +9,7 @@ from socket import *
 # TODO Change "try, except , finally" to "with" that has garbage collection
 # TODO Lower complexity
 # TODO use multithreading in port scan (if available)
+# TODO Add colors for bash and fix visual
 
 
 def showBanner(connSock, tgtPort):
@@ -64,8 +67,8 @@ def portScan(tgtHost, tgtPorts):
 def main():
     # Parsing the command line arguments
     parser = argparse.ArgumentParser('Smart TCP Client Scanner')
-    parser.add_argument("-a", "--address", type=str, help="The target IP address")
-    parser.add_argument("-p", "--port", type=str, help="The port number to connect with")
+    parser.add_argument("-a", "--address", type=str, help="The target IP address",required=True)
+    parser.add_argument("-p", "--port", type=str, help="The port number to connect with",required=True)
     args = parser.parse_args()
 
     # Store them
