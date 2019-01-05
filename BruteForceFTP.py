@@ -2,10 +2,14 @@
 
 import ftplib
 import argparse
+import sys
 
 # Usage python BruteForceFTP.py -a 192.168.3.84 -d data/passwords.txt -u data/usernames.txt
 # Or    python BruteForceFTP.py -a 192.168.3.84 -d data/passwords.txt -s ftpuser
 
+if sys.version_info[0] >= 3:
+	raw_input = input
+unicode = str
 
 def connect(host, user, password):
     try:
