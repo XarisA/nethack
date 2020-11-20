@@ -74,6 +74,7 @@ $ python BruteForceFTP.py -a 192.168.2.65 -d data/passwords.lst -s ftpuser
 
 ## TODO
 
+- Create install file and resolve dependencies
 - Add howto and examples in README for Getinfo.py
 - Add howto and examples in README for PortScanner.py
 - Add support for python > 3
