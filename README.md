@@ -37,7 +37,7 @@ python BruteForceFTP.py -h
 usage: FTP Dictionary Attack [-h] -a ADDRESS -d DICTIONARY
                              (-s SINGLEUSER | -u USERLIST)
 
-optional arguments:
+arguments:
   -h, --help            show this help message and exit
   -a ADDRESS, --address ADDRESS
                         The target IP address
