@@ -6,12 +6,6 @@ from socket import *
 
 # Usage python portscanner.py -a 192.168.100.100 -p 21,80
 
-# TODO Change "try, except , finally" to "with" that has garbage collection
-# TODO Lower complexity
-# TODO use multithreading in port scan (if available)
-# TODO Add colors for bash and fix visual
-
-
 def showBanner(connSock, tgtPort):
     try:
         # Send data to target
