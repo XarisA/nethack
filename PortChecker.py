@@ -3,7 +3,6 @@
 import argparse
 from socket import *
 
-
 # Usage python portscanner.py -a 192.168.100.100 -p 21,80
 
 def showBanner(connSock, tgtPort):
@@ -17,9 +16,9 @@ def showBanner(connSock, tgtPort):
         # Receive data from target
         results = connSock.recv(4096)
         # Print the banner
-        print '[+] Banner:' + str(results)
+        print ('[+] Banner:' + str(results))
     except:
-        print '[+] Banner not available\n'
+        print ('[+] Banner not available\n')
 
 
 def connScan(tgtHost, tgtPort):
@@ -28,11 +27,11 @@ def connScan(tgtHost, tgtPort):
         connSock = socket(AF_INET, SOCK_STREAM)
         # Try to connect ith the target
         connSock.connect((tgtHost, tgtPort))
-        print '[+] %d tcp open' % tgtPort
+        print ('[+] %d tcp open' % tgtPort)
         showBanner(connSock, tgtPort)
     except:
         # Print the failure results
-        print '[+] %d tcp closed' % tgtPort
+        print ('[+] %d tcp closed' % tgtPort)
     finally:
         # Close the socket object
         connSock.close()
@@ -43,13 +42,13 @@ def portScan(tgtHost, tgtPorts):
         # Resolve name to an ip
         tgtIP = gethostbyname(tgtHost)
     except:
-        print "[-] Error: Unknown Host"
+        print ("[-] Error: Unknown Host")
         exit(0)
     try:
         tgtName = gethostbyaddr(tgtIP)
-        print "[+] --- Scan result for: " + tgtName[0] + " ---"
+        print ("[+] --- Scan result for: " + tgtName[0] + " ---")
     except:
-        print '[+] --- Scan result for: ' + tgtIP + " ---"
+        print ('[+] --- Scan result for: ' + tgtIP + " ---")
 
     setdefaulttimeout(10)
 
