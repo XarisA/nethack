@@ -4,8 +4,7 @@
 A suite for testing various networking tools build in python.
 
 
-Installation
----
+### Installation
 
 ```shell
 # Download the file
@@ -23,13 +22,14 @@ $ chmod +x toolsname.py
 $ ./toolsname.py
 ```
 
+---
+
 ## BruteForceFTP
 
 
 Dictionary Attack on FTP server
 
-How to use:
----
+### How to use:
 
 ```shell
 python BruteForceFTP.py -h
@@ -58,8 +58,8 @@ $ chmod +x BruteForceFTP.py
 $ ./BruteForceFTP.py
 ```
 
-Examples:
----
+### Examples:
+
 
 ```shell
 # Let the script call the interpreter (linux only)
@@ -77,8 +77,7 @@ A python tool to check for open ports of a remote host.
 PortChecker works with ip as well as with domain name.
 You can use a single port or multiple ones seperated with comma.
 
-Example:
----
+### Example:
 
 ![PortChecker](https://user-images.githubusercontent.com/3985557/99880912-071ecf00-2c1f-11eb-9e3c-70f51fbb81fe.png)
 
@@ -93,7 +92,6 @@ You can install it with the following command.
 pip install dnspython
 ```
 
-Example:
----
+### Example:
 
 ![GetInfo](https://user-images.githubusercontent.com/3985557/99881117-54e80700-2c20-11eb-957a-404c4232b0be.png)
