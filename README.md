@@ -84,6 +84,7 @@ You can use a single port or multiple ones seperated with comma.
 ## GetInfo
 
 GetInfo is a python tool that gathers information about a specific host.
+More specifically it checks if the host is up and finds it's mx records.
 
 dnspython must be installed in order to use this tool.
 You can install it with the following command.
