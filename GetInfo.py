@@ -5,10 +5,7 @@ from socket import *
 import dns.resolver
 import dns.reversename
 
-# TODO Implement a module that gets information about the host
 # TODO Pass arguments from terminal
-# TODO Make every function os independent
-# TODO Add colors for bash and fix visual of console execute
 
 def reach_host(hostname,arguments='-c 1'):
     # Pinging the host
