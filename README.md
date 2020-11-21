@@ -73,9 +73,12 @@ $ python BruteForceFTP.py -a 192.168.2.65 -d data/passwords.lst -s ftpuser
 
 ## PortChecker
 
-A python tool to check for open ports to a remote location.
-Works with ip as well as with domain name.
-You can use a signle port or multiple ones seperated with coma.
+A python tool to check for open ports of a remote host.
+PortChecker works with ip as well as with domain name.
+You can use a single port or multiple ones seperated with comma.
+
+Example:
+---
 
 ![PortChecker](https://user-images.githubusercontent.com/3985557/99880912-071ecf00-2c1f-11eb-9e3c-70f51fbb81fe.png)
 
@@ -84,9 +87,13 @@ You can use a signle port or multiple ones seperated with coma.
 GetInfo is a python tool that gathers information about a specific host.
 
 dnspython must be installed in order to use this tool.
-You can install it with the following command
+You can install it with the following command.
+
 ```shell
 pip install dnspython
 ```
+
+Example:
+---
 
 ![GetInfo](https://user-images.githubusercontent.com/3985557/99881117-54e80700-2c20-11eb-957a-404c4232b0be.png)
