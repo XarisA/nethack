@@ -12,18 +12,18 @@ import dns.reversename
 
 def reach_host(hostname,arguments='-c 1'):
     # Pinging the host
-    print '[+] Pinging ' + hostname
+    print ('[+] Pinging ' + hostname)
     if os.system("ping " + arguments + ' '+ hostname) == 0:
-        print "Host appears to be up "
+        print ("Host appears to be up ")
     else:
-        print "Host is down or does not reply to ping requests "
-    print "Host's ip is " + gethostbyname(hostname)
+        print ("Host is down or does not reply to ping requests ")
+    print ("Host's ip is " , gethostbyname(hostname))
 
 
 def nslookup(hostname, typ3='MX'):
     answers = dns.resolver.query(hostname, typ3)
     for rdata in answers:
-        print 'Host', rdata.exchange, 'has preference', rdata.preference
+        print ('Host', rdata.exchange, 'has preference', rdata.preference)
 
 def name_reverse(hostip):
     n = dns.reversename.from_address(hostip)
@@ -32,12 +32,10 @@ def name_reverse(hostip):
 
 def main():
     hostname = "dnspython.org"
-    print '[+] Gatering information about host'
+    print ('[+] Gatering information about host')
     reach_host(hostname)
-    print "Mail server lookup "
+    print ("Mail server lookup ")
     nslookup(hostname)
-    print '[+] Reverse ip domain checking '
-    # TODO Reverse ip domain check
 
 
 if __name__ == "__main__":
